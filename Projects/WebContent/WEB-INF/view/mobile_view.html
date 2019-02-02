@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<title>Committee</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+ <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"><link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+ <style>
+	/* navbar */
+
+.navbar {
+	padding: 1rem !important;
+	background: none;
+}
+@media only screen and (max-width: 68px) {
+  .navbar {
+    display: none;
+  }
+}
+
+/* Top and Bottom borders come in */
+.navbar-nav li .nav-link{
+	color: #f7f7f7 !important;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+.navbar-nav li a:hover{
+	color: #4be6ee !important;
+	transition: all .5s;
+    
+}
+nav.black{
+	background: #353535;
+	padding-bottom: .8rem !important;
+	transition: all .5s;
+}
+
+
+
+
+.navbar-nav li .nav-link:before, .navbar-nav li .nav-link:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #4be6ee ;
+    content: "";
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+
+.navbar-nav li .nav-link:before
+{
+    top: 0px;
+    transform: translateY(-10px);
+}
+
+.navbar-nav li .nav-link:after
+{	
+	padding: 0;
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+.navbar-nav li .nav-link:hover:before, .navbar-nav li .nav-link:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+
+.dropdown .dropdown-menu{
+	background: #333;
+}
+.dropdown .dropdown-menu a{
+	color: #fff;
+}
+
+
+.dropdown .dropdown-menu {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    max-height: 200px;
+    opacity: 1;
+}
+
+</style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+				<div class="container-fluid">
+					<a href="#" class="navbar-brand">
+						<img src="" alt="">
+					</a>
+			
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+			
+					<div class="collapse navbar-collapse topBotomBordersOut" id="navbarResponsive">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item"><a href="homepage" class="nav-link">Home</a></li>
+
+
+							<li class="nav-item dropdown">
+						      <a class="nav-link" href="#" data-toggle="dropdown">
+						        About Conference <i class="fa fa-level-down"></i>	
+						      </a>
+
+						      <div class="dropdown-menu">
+						        <a class="dropdown-item" href="#">Messages</a>
+							      <a class="dropdown-item" href="#">Speakers</a>
+							      <a class="dropdown-item" href="#">News Feed</a>					      
+							      <a class="dropdown-item" href="#">Program Schedule</a>
+						      </div> 
+						    </li>
+
+
+							<li class="nav-item dropdown">
+						      <a class="nav-link" href="#" data-toggle="dropdown">
+						        Registration<i class="fa fa-level-down"></i>	
+						      </a>
+
+						      <div class="dropdown-menu">
+						        <a class="dropdown-item" href="Register">Register</a>
+					      		<a class="dropdown-item" href="#">Payment</a>
+						      </div> 
+						    </li>
+
+						    <li class="nav-item dropdown">
+						      <a class="nav-link" href="#" data-toggle="dropdown">
+						        Paper<i class="fa fa-level-down"></i>	
+						      </a>
+
+						      <div class="dropdown-menu">
+						        <a class="dropdown-item" href="#">Submission</a>
+					      		<a class="dropdown-item" href="#">Publications</a>
+						      </div> 
+						    </li>
+
+						    <li class="nav-item dropdown">
+						      <a class="nav-link" href="#" data-toggle="dropdown">
+						        Quick Link<i class="fa fa-level-down"></i>	
+						      </a>
+
+						      <div class="dropdown-menu">
+						        <a class="dropdown-item" href="http://cidch.edu.bd/">CIMCH</a>
+					      		<a class="dropdown-item" href="http://cidch.edu.bd/">CIDCH</a>
+						      </div> 
+						    </li>
+						    
+						    <!-- <li class="nav-item"><a href="logout" class="nav-link">Logout</a></li> -->
+
+						</ul>
+					</div>
+			    </div>
+			</nav>
+
+
+<main class="cd-main-content">
+
+<div class="content-wrapper align-self-start"  ><br/> 
+<div class="col-md-12 text-center"><br/><br/><br/><br/><br/>
+	<h2 style="font-size:25px;"><span class="glyphicon glyphicon-king" ></span>  Organizing Committee</h2>
+	<hr /><hr /><br>
+</div>        
+  <div class="col-md-12 text-center">
+  	<h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Prof.Dr.Kazi Deen Mohammad</li></h3>
+      <h4 style="font-size:100%;">Chairman ,BOT </h4>
+      <h5 style="font-size:100%;">Patron</h5>
+      <br>
+  </div>
+<div class="col-md-12" >
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Prof.Md.Amir Hossain </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Principal ,CIMC</h4>
+      <h5 class="text-center" style="font-size:100%;">Chairman</h5>
+       <br>
+    </div>
+    <div class="col-md-12">
+    	<h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Prof.Dr.Muslim Uddin Sabuj</li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Principal, CIDC </h4>
+      <h5 class="text-center" style="font-size:100%;">Member Secretary </h5>
+      <br>
+    </div>
+    <div class="col-md-12">
+    	<h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Mr.Md.Nurullah</li></h3>
+        <h4 class="text-center" style="font-size:100%;">Member,BOT </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br>
+    </div>
+    <div class="col-md-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Md.Rafique</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Vice Chairman,BOT </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br>
+    </div>
+     <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Md.Jalal Uddin</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Member,BOT </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br>
+    </div>
+     <div class="col-md-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Mokhlesur Rahman</li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Associate Professor,Surgery</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br>
+    </div>
+    <div class="col-md-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Hasan Meah</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Associate Professor,Urology</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br>
+    </div>
+    <div class="col-md-12">
+     <h3 class="text-center" style="font-size:100%;"><li style=" list-style-position: inside;">Dr.Md.Ali Hossain</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Vice Principal,CIDC</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br>
+    </div>
+    <div class="col-md-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Shahikul Jabbar</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Director,CIDCH</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br>
+    </div>
+
+    <div class="col-md-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Shaheda Ahmed  </li></h3>
+      <h4 class="text-center" style="font-size:100%;">Associate Professor, Biochemistry  </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br>
+    </div>
+
+    <div class="col-md-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Md.Monirul Alam</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Associate Professor, Anesthesiology</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br>
+    </div>
+
+    <div class="col-md-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Muslina Akhter</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Associate Professor, Gynae & Obs. </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br>
+    </div>
+
+    <div class="col-md-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Mehrunnisa Khanam</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Associate Professor(cc), Medicine</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br>
+    </div>
+
+    <div class="col-md-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Parvez Iqbal Sharif</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Associate Professor, CM</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br>
+    </div>
+
+     <div class="col-md-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Md.Kamrul Hasan</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Assistant Professor, Orthodontics</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br>
+    </div>
+  
+    <div class="col-md-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Engr.Md.Ohidul Islam </li></h3>
+      <h4 class="text-center" style="font-size:100%;">Head , Planning & Development Division</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br>
+    </div>
+
+    <div class="col-md-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Mohammed Ismail</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Sr. Assistant Director ,Admin</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br>
+    </div>
+
+    <div class="col-md-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Md. Azad Chowdhury</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Sr. Assistant Director ,ACFD</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br>
+    </div>
+</div>           
+       
+<div class="content-wrapper align-self-start"   ><br/> 
+<div class="col-md-12 text-center">
+	<h2 style="font-size:25px;"><span class="glyphicon glyphicon-pencil"></span> Registration Committee </h2>
+	<hr /><hr /><br>
+</div>        
+  <div class="col-md-12 text-center">
+  	<h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Parvez Iqbal Sharif</li></h3>
+      <h4 style="font-size:100%;">Associate Professor-CM</h4>
+      <h5 style="font-size:100%;">Convener</h5>
+      <br><br>
+  </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Saeed Ibne Harun</li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Associate Professor(cc)-Conservative</h4>
+      <h5 class="text-center" style="font-size:100%;">Member Secretary</h5>
+       <br><br>
+    </div>
+    <div class="col-sm-12">
+    	<h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Shahed Ali Khan</li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Assistant Professor, ENT</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+    	<h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Shamim Ara</li></h3>
+        <h4 class="text-center" style="font-size:100%;">Assistant Professor, Dermatology  </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Naeem Mahmud</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Lecturer,OMS</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+     <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Rafsanul Islam</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Lecturer , Pharmacology</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+     <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Adnan Safi </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Lecturer, Pathology</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+</div>
+
+<div class="content-wrapper align-self-start"><br/> 
+<div class="col-md-12 text-center">
+	<h2 style="font-size:25px;"><span class="glyphicon glyphicon-book"></span> Press, Publication, Crest& Gift Committee</h2>
+	<hr /><hr /><br>
+</div>        
+  <div class="col-sm-12">
+  	<h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Kamrul Hasan</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Assistant Professor</h4>
+      <h5 class="text-center" style="font-size:100%;">Convener</h5>
+      <br><br>
+  </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Engr.Md.Ohidul Islam</li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Head, Planning & Development Division</h4>
+      <h5 class="text-center" style="font-size:100%;">Member Secretary</h5>
+       <br><br>
+    </div>
+    <div class="col-sm-12">
+    	<h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Sarwar Kamal</li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Senior Assistant Director-CIDCH</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+    	<h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Sohan Chowdhury</li></h3>
+        <h4 class="text-center" style="font-size:100%;">Lecturer, Biochemistry</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Ariful Islam</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Lecturer, Dental Anatomy</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+     <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Moinuddin</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Lecturer, Dental Anatomy</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+     <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Mr.Abu Zafor</li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Asst. Admin Officer </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Mr.Raqibul Hakim  </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Office Assistant –PA to Principal</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+     <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Mr.Zaid Rashid </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Office Assistant –PA to Principal</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+</div>
+<div class="content-wrapper align-self-start" ><br/> 
+<div class="col-md-12 text-center">
+	<h2 style="font-size:25px;"><span class="glyphicon glyphicon-list-alt"></span> Scientific Committee</h2>
+	<hr /><hr /><br>
+</div>        
+  <div class="col-md-12 text-center">
+  	<h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Md.Ali Hossain</li></h3>
+      <h4 style="font-size:100%;">Associate Professor-VP,CIDC</h4>
+      <h5 style="font-size:100%;">Convener</h5>
+      <br><br>
+  </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Meherunnesa Khanom</li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Associate Professor(cc), Medicine</h4>
+      <h5 class="text-center" style="font-size:100%;">Member Secretary</h5>
+       <br><br>
+    </div>
+    <div class="col-sm-12">
+    	<h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Parvez Iqbal Sharif</li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Associate Professor-CM</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+    	<h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Kamrul Islam</li></h3>
+        <h4 class="text-center" style="font-size:100%;">Assistant Professor-Medicine</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Kamrul Hasan</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Assistant Professor-Orthodontics</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+     <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Afroza Hoque</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Assistant Professor-MEU</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+     <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Fatiha Tasnim Zenia</li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Assistant Professor-Pharmacology</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+</div>
+
+
+
+<div class="content-wrapper align-self-start"><br/> 
+<div class="col-md-12 text-center">
+  <h2 style="font-size:25px;" style="font-size:100%;"><span class="glyphicon glyphicon-lock"></span> Finance Committee </h2>
+  <hr /><hr /><br>
+</div>        
+  <div class="col-md-12 text-center">
+    <h3 class="text-center" style="font-size:100%;"> <li style="list-style-position: inside;">Prof.Dr. Muslimuddin Sabuj</li></h3>
+      <h4 style="font-size:100%;">Secretary , Board Of Trustees</h4>
+      <h5 style="font-size:100%;">Convener</h5>
+      <br><br>
+  </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Shahiqul Zabbar</li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Director ,CIDCH</h4>
+      <h5 class="text-center" style="font-size:100%;">Member Secretary</h5>
+       <br><br>
+    </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Abur Razzak Khan</li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Senior Assistant Director-CIMCH</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr. Sarwar Kamal</li></h3>
+        <h4 class="text-center" style="font-size:100%;">Senior Assistant Director-CIDCH</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Md.Azad Chowdhury</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Senior Assistant Director-ACFD</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+     <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Kohinoor Akther</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Assistant Professor- Gynae & Obs.</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+</div>
+
+<div class="content-wrapper align-self-start" ><br/> 
+<div class="col-md-12 text-center">
+  <h2 style="font-size:25px;"><span class="glyphicon glyphicon-eye-open"></span> Discipline Committee </h2>
+  <hr /><hr /><br>
+</div>        
+  <div class="col-md-12 text-center">
+    <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Khairul Anwar</li></h3>
+      <h4 style="font-size:100%;">Associate Professor, Anesthesiology </h4>
+      <h5 style="font-size:100%;">Convener</h5>
+      <br><br>
+  </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Ahammed Ali Sarkar</li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Deputy Director ( Admin )</h4>
+      <h5 class="text-center" style="font-size:100%;">Lt.Cdr(Retd.) </h5>
+      <h5 class="text-center" style="font-size:100%;">Member Secretary </h5>
+       <br><br>
+    </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Asma Kabir Shoma</li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Associate Professor – Physiology</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Roksana Ahamed</li></h3>
+        <h4 class="text-center" style="font-size:100%;">Assistant Professor- Padiatrics</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr. Nasrin Sultana</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Associate Professor- Pathology</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+     <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Faysal Sirajee</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Assistant Professor- Conservatives</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+     <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.SM.Shahadat Hossain</li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Assistant Professor- Prosthodontics</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Abu Musa Al Amin</li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Resident Physician – Medicine</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+</div>
+<div class="content-wrapper align-self-start"><br/> 
+<div class="col-md-12 text-center">
+  <h2 style="font-size:25px;"><span class="glyphicon glyphicon-asterisk"></span> Decoration & Beautification Committee </h2>
+  <hr /><hr /><br>
+</div>        
+  <div class="col-md-12 text-center">
+    <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Mukhlesur Rahman</li></h3>
+      <h4 style="font-size:100%;">Associate Professor & Head, Surgery </h4>
+      <h5 style="font-size:100%;">Convener</h5>
+      <br><br>
+  </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Engr.Md.Ohidul Islam   </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Head, Planning & Development Division </h4>
+      <h5 class="text-center" style="font-size:100%;">Member Secretary </h5>
+       <br><br>
+    </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Ahammed Ali Sarkar  </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Deputy Director ( Admin )</h4>
+      <h4 class="text-center" style="font-size:100%;">Lt.Cdr(Retd.) </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Md.Sheran</li></h3>
+        <h4 class="text-center" style="font-size:100%;">Assistant Professor –Microbiology </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Sohan Chowdhury  </li></h3>
+      <h4 class="text-center" style="font-size:100%;">Lecturer- Biochemistry</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+     <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr. Shoaib</li></h3>
+      <h4 class="text-center" style="font-size:100%;">Junior Consultant –ENT</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+     <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Md.Mujibur Rahman</li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Sub Asst. Engr. (Civil)</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    
+</div>
+</div>
+
+<div class="content-wrapper align-self-start"><br/> 
+<div class="col-md-12 text-center">
+  <h2 style="font-size:25px;"><span class="glyphicon glyphicon-bell"></span> Entertainment Committee  </h2>
+  <hr /><hr /><br>
+</div>        
+  <div class="col-md-12 text-center">
+    <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr. Hasan Miah</li></h3>
+      <h4 style="font-size:100%;">Associate Professor, Urology </h4>
+      <h5 style="font-size:100%;">Convener</h5>
+      <br><br>
+  </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Mohiuddin Arju</li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Registrar , Surgery  </h4>
+      <h5 class="text-center" style="font-size:100%;">Member Secretary</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Saifuddin Rokon </li></h3>
+        <h4 class="text-center" style="font-size:100%;">Registrar , Orthopedics </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Mohammed Ismail   </li></h3>
+      <h4 class="text-center" style="font-size:100%;">Senior Assistant Director- Admin </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+     <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Md.Hossain Rashid </li></h3>
+      <h4 class="text-center" style="font-size:100%;">Assistant Director-HRD</h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+     <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Mizan Uddin Imran  </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Junior Consultant –Anesthesiology   </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+</div>
+<div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr. Nadim Haider    </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Junior Consultant –Anesthesiology     </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+</div>
+<div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Md.Ismail    </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Lecturer , Prosthodontics    </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+</div>
+</div>
+<div class="content-wrapper align-self-start"><br/> 
+<div class="col-md-12 text-center">
+  <h2 style="font-size:25px;"><span class="glyphicon glyphicon-export"></span> Reception  Committee   </h2>
+  <hr /><hr /><br>
+</div>        
+  <div class="col-md-12 text-center">
+    <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr. Md.Monirul Alam     </li></h3>
+      <h4 style="font-size:100%;">Associate Professor, Anesthesiology </h4>
+      <h5 style="font-size:100%;">Convener</h5>
+      <br><br>
+  </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Akhtarul Islam      </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Consultant ,Cardiology    </h4>
+      <h5 class="text-center" style="font-size:100%;">Member Secretary </h5>
+       <br><br>
+    </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Muslina Akhter     </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Associate Professor, Gynae&Obs.   </h4>
+      <h5 class="text-center" style="font-size:100%;">Member Secretary</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Khairul Anwar  </li></h3>
+        <h4 class="text-center" style="font-size:100%;">Associate Professor, Anesthesiology </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Farzana Akther     </li></h3>
+      <h4 class="text-center" style="font-size:100%;">Assistant Professor, Gynae & Obs. </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+     <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Jashim Uddin    </li></h3>
+      <h4 class="text-center" style="font-size:100%;">Assistant Professor ,Child Dentistry   </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+     <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr. Saifuddin Rokon      </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Registrar, Orthopedics   </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+</div>
+<div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Md.Ehsan Siddique    </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Senior Admin Officer ,ACAD     </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+</div>
+</div>
+<div class="content-wrapper align-self-start"><br/> 
+<div class="col-md-12 text-center">
+  <h2 style="font-size:25px;"><span class="glyphicon glyphicon-sort-by-attributes"></span> Transport  Committee   </h2>
+  <hr /><hr /><br>
+</div>        
+  <div class="col-md-12 text-center">
+    <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr. Shah Alam Sarkar          </li></h3>
+      <h4 style="font-size:100%;">Professor , Community Medicine  </h4>
+      <h5 style="font-size:100%;">Convener</h5>
+      <br><br>
+  </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Mohammed Ismail     </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Senior Assistant Director-Admin    </h4>
+      <h5 class="text-center" style="font-size:100%;">Member Secretary </h5>
+       <br><br>
+    </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Jashim Uddin       </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Assistant Professor - Eye  </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Jashim Uddin     </li></h3>
+        <h4 class="text-center" style="font-size:100%;">Assistant Professor - Endocrinology </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+</div>
+<div class="content-wrapper align-self-start"  ><br/> 
+<div class="col-md-12 text-center">
+  <h2 style="font-size:25px;"><span class="glyphicon glyphicon-fire"></span> Cultural  Committee   </h2>
+  <hr /><hr /><br>
+</div>        
+  <div class="col-md-12 text-center">
+    <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr. Ashek E Elahi                 </li></h3>
+      <h4 style="font-size:100%;">Associate Professor , Pharmacology   </h4>
+      <h5 style="font-size:100%;">Convener</h5>
+      <br><br>
+  </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Md.Nazmul Huda Ripon          </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Assistant Professor , Padiatrics    </h4>
+      <h5 class="text-center" style="font-size:100%;">Member Secretary </h5>
+       <br><br>
+    </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Ansar Uddin           </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Assistant Professor - OMS </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Saad Kaiser        </li></h3>
+        <h4 class="text-center" style="font-size:100%;">Lecturer , Orthodontics  </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Nesar Uddin      </li></h3>
+      <h4 class="text-center" style="font-size:100%;">Lecturer , SDM  </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    
+</div>
+<div class="content-wrapper align-self-start"  ><br/> 
+<div class="col-md-12 text-center">
+  <h2 style="font-size:25px;"><span class="glyphicon glyphicon-tasks"></span> Program Supervision & Announcement Committee    </h2>
+  <hr /><hr /><br>
+</div>        
+  <div class="col-md-12 text-center">
+    <h3 class="text-center" style="font-size:100%;"> <li style="list-style-position: inside;">Prof.Dr.khan Mashrequl Alam        </li></h3>
+      <h4 style="font-size:100%;">Professor , Microbiology    </h4>
+      <h5 style="font-size:100%;">Convener</h5>
+      <br><br>
+  </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Meherunnesa Khanom        </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Associate Professor(cc) , Medicine  </h4>
+      <h5 class="text-center" style="font-size:100%;">Member Secretary </h5>
+       <br><br>
+    </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Shaheda Ahmed      </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Associate Professor - Biochemistry </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.A.K.M.Salauddin Swapan     </li></h3>
+        <h4 class="text-center" style="font-size:100%;">Associate Professor(cc) –SDM  </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+     <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Farina Rahman  </li></h3>                                          
+      <h4 class="text-center" style="font-size:100%;">Lecturer , Dental Public Health </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    
+</div>
+<div class="content-wrapper align-self-start" ><br/> 
+<div class="col-md-12 text-center">
+  <h2 style="font-size:25px;"><span class="glyphicon glyphicon-fullscreen"></span> Volunteer Committee    </h2>
+  <hr /><hr /><br>
+</div>        
+  <div class="col-md-12 text-center">
+    <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Prof.Dr.Habib Khan                         </li></h3>
+      <h4 style="font-size:100%;">Professor , Anatomy     </h4>
+      <h5 style="font-size:100%;">Convener</h5>
+      <br><br>
+  </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Salauddin Sharif                 </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Associate Professor , Biochemistry</h4>
+      <h5 class="text-center" style="font-size:100%;">Member Secretary </h5>
+       <br><br>
+    </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.Ahmad Ahsan Chowddhury              </li> </h3>
+      <h4 class="text-center" style="font-size:100%;">Lecturer – Prosthodontics  </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-size:100%;"><li style="list-style-position: inside;">Dr.ATM Tareq        </li></h3>
+        <h4 class="text-center" style="font-size:100%;">Lecturer-Child Dentistry   </h4>
+      <h5 class="text-center" style="font-size:100%;">Member</h5>
+      <br><br>
+    </div>
+    
+</div>
+
+	</main>
+</div>
+</body>
+
+</html>

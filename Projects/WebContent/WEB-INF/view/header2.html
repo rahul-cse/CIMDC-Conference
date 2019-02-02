@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+	<!-- Bootstrp 4 & CSS Including -->
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Bootstrap-JS & JS Including -->
+	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- <script src="parallax.js-1.5.0/parallax.min.js"></script> -->
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+</head>
+
+<style>
+	/* navbar */
+
+.navbar {
+	padding: 1rem !important;
+	background: none;
+}
+
+/* Top and Bottom borders come in */
+.navbar-nav li .nav-link{
+	color: #f7f7f7 !important;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+.navbar-nav li a:hover{
+	color: #4be6ee !important;
+	transition: all .5s;
+    
+}
+nav.black{
+	background: #353535;
+	padding-bottom: .8rem !important;
+	transition: all .5s;
+}
+
+
+
+
+.navbar-nav li .nav-link:before, .navbar-nav li .nav-link:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #4be6ee ;
+    content: "";
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+
+.navbar-nav li .nav-link:before
+{
+    top: 0px;
+    transform: translateY(-10px);
+}
+
+.navbar-nav li .nav-link:after
+{	
+	padding: 0;
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+.navbar-nav li .nav-link:hover:before, .navbar-nav li .nav-link:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+
+.dropdown .dropdown-menu{
+	background: #333;
+}
+.dropdown .dropdown-menu a{
+	color: #fff;
+}
+
+
+.dropdown .dropdown-menu {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    max-height: 200px;
+    opacity: 1;
+}
+
+</style>
+<body>
+
+
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+				<div class="container-fluid">
+					<a href="#" class="navbar-brand">
+						<img src="" alt="">
+					</a>
+			
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+			
+					<div class="collapse navbar-collapse topBotomBordersOut" id="navbarResponsive">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item"><a href="homepage" class="nav-link">Home</a></li>
+
+
+							<li class="nav-item dropdown">
+						      <a class="nav-link" href="#" data-toggle="dropdown">
+						        About Conference <i class="fa fa-level-down"></i>	
+						      </a>
+
+						      <div class="dropdown-menu">
+						        <a class="dropdown-item" href="#">Messages</a>
+							      <a class="dropdown-item" href="#">Speakers</a>
+							      <a class="dropdown-item" href="Committee">Committee</a>
+							      <a class="dropdown-item" href="#">News Feed</a>					      
+							      <a class="dropdown-item" href="#">Program Schedule</a>
+						      </div> 
+						    </li>
+
+
+							<li class="nav-item dropdown">
+						      <a class="nav-link" href="#" data-toggle="dropdown">
+						        Registration<i class="fa fa-level-down"></i>	
+						      </a>
+
+						      <div class="dropdown-menu">
+						        <a class="dropdown-item" href="Register">Register</a>
+					      		<a class="dropdown-item" href="#">Payment</a>
+						      </div> 
+						    </li>
+
+						    <li class="nav-item dropdown">
+						      <a class="nav-link" href="#" data-toggle="dropdown">
+						        Paper<i class="fa fa-level-down"></i>	
+						      </a>
+
+						      <div class="dropdown-menu">
+						        <a class="dropdown-item" href="#">Submission</a>
+					      		<a class="dropdown-item" href="#">Publications</a>
+						      </div> 
+						    </li>
+
+						    <li class="nav-item dropdown">
+						      <a class="nav-link" href="#" data-toggle="dropdown">
+						        Quick Link<i class="fa fa-level-down"></i>	
+						      </a>
+
+						      <div class="dropdown-menu">
+						        <a class="dropdown-item" href="http://cidch.edu.bd/">CIMCH</a>
+					      		<a class="dropdown-item" href="http://cidch.edu.bd/">CIDCH</a>
+						      </div> 
+						    </li>
+						    
+						    <!-- <li class="nav-item"><a href="logout" class="nav-link">Logout</a></li> -->
+
+						</ul>
+					</div>
+			    </div>
+			</nav>
+
+
+<img src="/resources/cmosh.png">
+
+
+
+
+</body>
+</html>

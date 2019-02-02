@@ -1,0 +1,33 @@
+@charset "ISO-8859-1";
+#reg-form{
+	margin-top:10%;
+	text-align:center;
+	border-style: inset;
+}
+
+i{
+	color:grey;
+}
+#TEXT{
+	border-radius:5px;
+	border-width:1px;
+	width:15%;
+	height:24px;
+}
+#TexT{
+	border-radius:5px;
+	border-width:1px;
+	width:30%;
+	height:24px;
+}
+input[type="submit"]{
+	background-color:#42f4c8;
+	border-radius:5px;
+	border-width:0px;
+	color:white;
+	width:10%;
+	height:28px;
+	font-weight: bold;
+	cursor:pointer;
+	font-size:14px;
+}
